@@ -61,6 +61,11 @@ lineas.push(
   '',
   '# Páginas del sitio viejo que no existen en el nuevo.',
   '/terminosycondiciones  /manifiesto/  301',
+  '',
+  '# El sitio vive en www. Sin esto, invisible.com.ar y www.invisible.com.ar',
+  '# devuelven las mismas páginas por duplicado (Softr lo resolvía solo).',
+  '# Va al final: las reglas de arriba se aplican primero.',
+  'https://invisible.com.ar/*  https://www.invisible.com.ar/:splat  301',
   ''
 );
 
