@@ -1,9 +1,12 @@
 # dependencias
 node_modules/
 
-# salida del build
-dist/
+# caché de Astro
 .astro/
+
+# NOTA: dist/ (el sitio ya construido) SÍ va al repositorio, a propósito.
+# Cloudflare despliega esa carpeta tal cual, sin depender de poder
+# construir el proyecto en su servidor.
 
 # sistema
 .DS_Store
