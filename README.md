@@ -22,16 +22,16 @@ Click derecho en `OneDrive/Escritorio/Invisible/bajar-imagenes.ps1` →
 > el script el mismo día.
 
 **3. Regenerar y publicar.**
-Desde esta carpeta, en la terminal:
+Desde esta carpeta, en la terminal, un solo comando:
 
 ```bash
-npm run actualizar     # relee los CSV, optimiza imágenes y reconstruye el sitio
-git add .
-git commit -m "Actualizo datos"
-git push
+npm run publicar
 ```
 
+Eso relee los CSV, optimiza las imágenes, reconstruye el sitio y lo sube.
 Cloudflare detecta el push y publica solo, en un par de minutos.
+
+> Si algo falla, no publica nada y el sitio que está online queda intacto.
 
 ---
 
@@ -51,10 +51,14 @@ Y abrí http://localhost:4321
 ```
 scripts/importar-datos.mjs   Lee los CSV + mapa-imagenes.csv, arma src/data/*.json,
                              optimiza las fotos a .webp y las deja en public/img/
+scripts/generar-redirects.mjs Manda las direcciones viejas de Softr a las nuevas
+scripts/publicar.mjs         Lo que corre "npm run publicar"
 src/pages/                   Una carpeta por sección; [slug].astro genera las fichas
 src/lib/orden.js             Orden aleatorio que rota cada día
+src/config.mjs               Identificador de Google Analytics
 src/styles/global.css        Todo el diseño. Colores y tipografías arriba de todo
 src/layouts/Base.astro       Cabecera, pie, SEO y metadatos sociales
+.github/workflows/           La rotación diaria automática (ver abajo)
 ```
 
 Las rutas de sección son las mismas que tenía el sitio en Softr
@@ -65,7 +69,15 @@ para no perder lo que Google ya tenía indexado.
 
 - **El orden de las listas es aleatorio y rota cada día.** No es un detalle
   técnico: es la garantía de que nadie compra posición. Está en `src/lib/orden.js`
-  y se calcula en cada build.
+  y se calcula en cada build. Como el sitio es estático, todas las noches a las
+  00:10 GitHub lo reconstruye y lo publica solo para que la rotación ocurra:
+  eso es `.github/workflows/publicar-diario.yml`. Por eso `npm run publicar`
+  trae primero lo que hizo el robot; si publicás con `git push` a mano y te
+  rechaza el envío, hacé `git pull` antes.
+- **Las direcciones viejas del sitio en Softr redirigen a las nuevas**
+  (`scripts/generar-redirects.mjs` arma `public/_redirects`). Google todavía
+  tiene indexadas las de antes. No agregar ahí una regla comodín general:
+  Cloudflare le da prioridad sobre las específicas y manda todo a la home.
 - **Las imágenes se optimizan siempre.** Las originales de Airtable pesan hasta
   4 MB; sin esto el sitio se vuelve lento y el repositorio impracticable.
 - **Los datos generados (`src/data/`, `public/img/`) van al repositorio.**
