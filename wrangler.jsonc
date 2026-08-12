@@ -1,0 +1,12 @@
+{
+  // Configuración de Cloudflare Workers para servir el sitio estático.
+  // El sitio no ejecuta código en el servidor: Cloudflare solo entrega
+  // los archivos que Astro genera en dist/.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "invisible",
+  "compatibility_date": "2026-08-11",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
