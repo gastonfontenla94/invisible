@@ -9,6 +9,11 @@
  * El recordId se ignora con un comodín (*): el slug alcanza para saber
  * a qué ficha apuntaba cada URL.
  *
+ * OJO (verificado en producción el 12/8/2026): no agregar una regla general
+ * tipo "/pagina/*  /" como red de contención. Cloudflare le da prioridad por
+ * encima de las reglas específicas y termina mandando TODAS las fichas a la
+ * home. Una ficha vieja que ya no existe es preferible que dé 404.
+ *
  * Se corre solo antes de cada build (ver package.json).
  */
 
