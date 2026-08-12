@@ -1,0 +1,52 @@
+# Vuelve a construir y publicar el sitio todas las noches.
+#
+# Único motivo: el orden de las listas es aleatorio y rota cada día, y se
+# resuelve en el momento de construir el sitio. Sin esta rutina el orden
+# quedaría congelado hasta la próxima actualización manual.
+#
+# No toca los datos: usa los que están en el repositorio (src/data).
+
+name: Publicar todos los días
+
+on:
+  schedule:
+    # 03:10 UTC = 00:10 en Argentina (recién pasada la medianoche).
+    - cron: '10 3 * * *'
+  workflow_dispatch:
+
+# evita que dos publicaciones se pisen
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Construir el sitio
+        run: npm run build
+
+      - name: Publicar si cambió el orden
+        run: |
+          git config user.name "Invisible (rotación diaria)"
+          git config user.email "contacto@invisible.com.ar"
+          git add dist
+          if git diff --staged --quiet; then
+            echo "El orden no cambió: no hay nada que publicar."
+          else
+            git commit -m "Rotación diaria del orden de las listas"
+            git pull --rebase origin main
+            git push origin main
+          fi

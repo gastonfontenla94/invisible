@@ -1,0 +1,93 @@
+# Generado por scripts/generar-redirects.mjs — no editar a mano.
+# Redirecciones de las URLs del sitio viejo (Softr) a las nuevas.
+
+# Fichas: /pagina/<slug>/r/<recordId>  ->  /<seccion>/<slug>/
+/pagina/estudio-ion/r/*  /estudios-de-grabacion/estudio-ion/  301
+/pagina/estudios-panda/r/*  /estudios-de-grabacion/estudios-panda/  301
+/pagina/romaphonic/r/*  /estudios-de-grabacion/romaphonic/  301
+/pagina/crazy-diamond/r/*  /estudios-de-grabacion/crazy-diamond/  301
+/pagina/440-estudio/r/*  /estudios-de-grabacion/440-estudio/  301
+/pagina/maya-studio/r/*  /estudios-de-grabacion/maya-studio/  301
+/pagina/desdemona/r/*  /estudios-de-grabacion/desdemona/  301
+/pagina/sonoramica/r/*  /estudios-de-grabacion/sonoramica/  301
+/pagina/islandia-estudio/r/*  /estudios-de-grabacion/islandia-estudio/  301
+/pagina/unisono-estudio/r/*  /estudios-de-grabacion/unisono-estudio/  301
+/pagina/el-desvio-estudio/r/*  /estudios-de-grabacion/el-desvio-estudio/  301
+/pagina/delia-records/r/*  /estudios-de-grabacion/delia-records/  301
+/pagina/estudios-penny-lane/r/*  /estudios-de-grabacion/estudios-penny-lane/  301
+/pagina/domo-estudio/r/*  /estudios-de-grabacion/domo-estudio/  301
+/pagina/estudio-diapason/r/*  /estudios-de-grabacion/estudio-diapason/  301
+/pagina/lufs-records/r/*  /estudios-de-grabacion/lufs-records/  301
+/pagina/andres-mayo-estudio/r/*  /estudios-de-grabacion/andres-mayo-estudio/  301
+/pagina/del-cielito-records/r/*  /estudios-de-grabacion/del-cielito-records/  301
+/pagina/estudio-orion/r/*  /estudios-de-grabacion/estudio-orion/  301
+/pagina/casa-de-la-musica/r/*  /estudios-de-grabacion/casa-de-la-musica/  301
+/pagina/estudio-primula/r/*  /estudios-de-grabacion/estudio-primula/  301
+/pagina/titanio-studios/r/*  /estudios-de-grabacion/titanio-studios/  301
+/pagina/el-bonsai/r/*  /estudios-de-grabacion/el-bonsai/  301
+/pagina/estudio-doctor-f/r/*  /estudios-de-grabacion/estudio-doctor-f/  301
+/pagina/mate-mistico/r/*  /estudios-de-grabacion/mate-mistico/  301
+/pagina/estudio-casa-rara/r/*  /estudios-de-grabacion/estudio-casa-rara/  301
+/pagina/mirifico-estudio/r/*  /estudios-de-grabacion/mirifico-estudio/  301
+/pagina/luis-primo/r/*  /ingenierosyproductores/luis-primo/  301
+/pagina/gabriel-cabrera/r/*  /ingenierosyproductores/gabriel-cabrera/  301
+/pagina/facu-gonzalez/r/*  /ingenierosyproductores/facu-gonzalez/  301
+/pagina/sebastian-palacios/r/*  /ingenierosyproductores/sebastian-palacios/  301
+/pagina/mario-breuer/r/*  /ingenierosyproductores/mario-breuer/  301
+/pagina/andres-mayo/r/*  /ingenierosyproductores/andres-mayo/  301
+/pagina/martin-muscatello/r/*  /ingenierosyproductores/martin-muscatello/  301
+/pagina/natalia-perelman/r/*  /ingenierosyproductores/natalia-perelman/  301
+/pagina/eduardo-bergallo/r/*  /ingenierosyproductores/eduardo-bergallo/  301
+/pagina/gustavo-borner/r/*  /ingenierosyproductores/gustavo-borner/  301
+/pagina/gustavo-gauvry/r/*  /ingenierosyproductores/gustavo-gauvry/  301
+/pagina/mariano-lopez/r/*  /ingenierosyproductores/mariano-lopez/  301
+/pagina/pablo-rabinovich/r/*  /ingenierosyproductores/pablo-rabinovich/  301
+/pagina/cana-san-martin/r/*  /ingenierosyproductores/cana-san-martin/  301
+/pagina/martin-kano/r/*  /ingenierosyproductores/martin-kano/  301
+/pagina/conrado-silvela/r/*  /ingenierosyproductores/conrado-silvela/  301
+/pagina/javier-fracchia/r/*  /ingenierosyproductores/javier-fracchia/  301
+/pagina/luciano-gordillo/r/*  /ingenierosyproductores/luciano-gordillo/  301
+/pagina/evlay-facundo-yalve/r/*  /ingenierosyproductores/evlay-facundo-yalve/  301
+/pagina/daniel-ovie/r/*  /ingenierosyproductores/daniel-ovie/  301
+/pagina/gustavo-sacchetti/r/*  /ingenierosyproductores/gustavo-sacchetti/  301
+/pagina/ezequiel-morfi/r/*  /ingenierosyproductores/ezequiel-morfi/  301
+/pagina/nico-cotton/r/*  /ingenierosyproductores/nico-cotton/  301
+/pagina/paulina-chiarantano/r/*  /ingenierosyproductores/paulina-chiarantano/  301
+/pagina/constanza-sanchez/r/*  /ingenierosyproductores/constanza-sanchez/  301
+/pagina/ariel-lavigna/r/*  /ingenierosyproductores/ariel-lavigna/  301
+/pagina/santiago-de-simone/r/*  /ingenierosyproductores/santiago-de-simone/  301
+/pagina/agustin-silberleib/r/*  /ingenierosyproductores/agustin-silberleib/  301
+/pagina/florencio-justo/r/*  /ingenierosyproductores/florencio-justo/  301
+/pagina/carlos-laurenz/r/*  /ingenierosyproductores/carlos-laurenz/  301
+/pagina/ruben-ordonez/r/*  /ingenierosyproductores/ruben-ordonez/  301
+/pagina/mariano-otero/r/*  /ingenierosyproductores/mariano-otero/  301
+/pagina/paco-amenabar/r/*  /ingenierosyproductores/paco-amenabar/  301
+/pagina/instituto-orion/r/*  /formacion/instituto-orion/  301
+/pagina/escuela-de-musica-de-buenos-aires/r/*  /formacion/escuela-de-musica-de-buenos-aires/  301
+/pagina/andres-mayo-cursos/r/*  /formacion/andres-mayo-cursos/  301
+/pagina/estudio-urbano/r/*  /formacion/estudio-urbano/  301
+/pagina/universidad-nacional-de-las-artes/r/*  /formacion/universidad-nacional-de-las-artes/  301
+/pagina/instituto-terciario-tamaba/r/*  /formacion/instituto-terciario-tamaba/  301
+/pagina/instituto-rec/r/*  /formacion/instituto-rec/  301
+/pagina/escuela-tecson/r/*  /formacion/escuela-tecson/  301
+/pagina/instituto-de-sonido-ecos/r/*  /formacion/instituto-de-sonido-ecos/  301
+/pagina/mad-escuela/r/*  /formacion/mad-escuela/  301
+/pagina/la-metro/r/*  /formacion/la-metro/  301
+/pagina/aural-escuela-de-audio/r/*  /formacion/aural-escuela-de-audio/  301
+/pagina/inartec/r/*  /formacion/inartec/  301
+/pagina/la-colmena/r/*  /formacion/la-colmena/  301
+/pagina/emc-escuela-de-musica-contemporanea/r/*  /formacion/emc-escuela-de-musica-contemporanea/  301
+
+# Fichas que ya no están publicadas, o slugs que cambiaron:
+# van a la sección en vez de morir en un 404.
+/pagina/*  /  301
+
+# Plantillas de detalle de Softr (llevaban el registro en ?recordId=,
+# que no viaja en la redirección: se manda a la sección).
+/estudios-de-grabacion-details  /estudios-de-grabacion/  301
+/ingenieros-y-productores-details  /ingenierosyproductores/  301
+/ingenierosyproductores-details  /ingenierosyproductores/  301
+/formacion-details  /formacion/  301
+
+# Páginas del sitio viejo que no existen en el nuevo.
+/terminosycondiciones  /manifiesto/  301

@@ -7,6 +7,9 @@
  *
  * Se resuelve en el build. El workflow de GitHub Actions vuelve a publicar
  * el sitio todos los días para que la rotación ocurra sola.
+ *
+ * La fecha se toma en hora de Argentina y no en la del servidor: el build
+ * automático corre en máquinas de GitHub, que están en UTC.
  */
 
 function hash(texto, semilla) {
@@ -18,10 +21,20 @@ function hash(texto, semilla) {
   return h;
 }
 
+/** Fecha de hoy en Buenos Aires, como número AAAAMMDD. */
+export function fechaArgentina(momento = new Date()) {
+  const partes = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Argentina/Buenos_Aires',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(momento);
+
+  return Number(partes.replaceAll('-', ''));
+}
+
 export function ordenDiario(items) {
-  const hoy = new Date();
-  const semilla =
-    hoy.getFullYear() * 10000 + (hoy.getMonth() + 1) * 100 + hoy.getDate();
+  const semilla = fechaArgentina();
 
   return [...items].sort(
     (a, b) => hash(a.slug, semilla) - hash(b.slug, semilla)

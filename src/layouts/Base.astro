@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ANALYTICS_ID } from '../config.mjs';
 
 const {
   titulo,
@@ -46,6 +47,18 @@ const links = [
     href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500&family=Inter:wght@400;500&display=swap"
     rel="stylesheet"
   />
+
+  {ANALYTICS_ID && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`}></script>
+      <script is:inline define:vars={{ ANALYTICS_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', ANALYTICS_ID);
+      </script>
+    </>
+  )}
 </head>
 
 <body>

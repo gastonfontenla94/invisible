@@ -6,9 +6,10 @@
   "scripts": {
     "datos": "node scripts/importar-datos.mjs",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/generar-redirects.mjs && astro build",
     "preview": "astro preview",
-    "actualizar": "node scripts/importar-datos.mjs && astro build"
+    "actualizar": "node scripts/importar-datos.mjs && npm run build",
+    "publicar": "node scripts/publicar.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
