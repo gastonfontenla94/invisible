@@ -47,10 +47,6 @@ for (const { archivo, ruta } of secciones) {
 
 lineas.push(
   '',
-  '# Fichas que ya no están publicadas, o slugs que cambiaron:',
-  '# van a la sección en vez de morir en un 404.',
-  '/pagina/*  /  301',
-  '',
   '# Plantillas de detalle de Softr (llevaban el registro en ?recordId=,',
   '# que no viaja en la redirección: se manda a la sección).',
   '/estudios-de-grabacion-details  /estudios-de-grabacion/  301',
