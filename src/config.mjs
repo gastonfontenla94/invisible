@@ -7,4 +7,4 @@
  *
  * Si queda vacío, el sitio no carga Analytics (ni cookies de Google).
  */
-export const ANALYTICS_ID = '';
+export const ANALYTICS_ID = 'G-SNTL9WLY4C';

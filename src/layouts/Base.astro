@@ -53,9 +53,9 @@ const links = [
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`}></script>
       <script is:inline define:vars={{ ANALYTICS_ID }}>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', ANALYTICS_ID);
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', ANALYTICS_ID);
       </script>
     </>
   )}
