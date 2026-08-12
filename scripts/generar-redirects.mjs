@@ -61,13 +61,15 @@ lineas.push(
   '',
   '# Páginas del sitio viejo que no existen en el nuevo.',
   '/terminosycondiciones  /manifiesto/  301',
-  '',
-  '# El sitio vive en www. Sin esto, invisible.com.ar y www.invisible.com.ar',
-  '# devuelven las mismas páginas por duplicado (Softr lo resolvía solo).',
-  '# Va al final: las reglas de arriba se aplican primero.',
-  'https://invisible.com.ar/*  https://www.invisible.com.ar/:splat  301',
   ''
 );
+
+// Nota: acá NO se puede mandar invisible.com.ar (sin www) a www. Se probó en
+// producción el 12/8/2026 y Cloudflare ignora las reglas que empiezan con un
+// dominio: este archivo solo entiende rutas. Los dos dominios sirven las mismas
+// páginas; lo que evita que Google las tome por duplicadas es la etiqueta
+// canónica del <head>, que siempre apunta a www. Para redirigir de verdad hay
+// que crear una Redirect Rule en el panel de Cloudflare.
 
 fs.mkdirSync(path.join(RAIZ, 'public'), { recursive: true });
 fs.writeFileSync(
