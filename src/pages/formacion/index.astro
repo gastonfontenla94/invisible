@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tarjeta from '../../components/Tarjeta.astro';
+import Filtros from '../../components/Filtros.astro';
+import formacion from '../../data/formacion.json';
+import { ordenDiario } from '../../lib/orden.js';
+
+const lista = ordenDiario(formacion);
+
+const modalidades = [...new Set(formacion.map((f) => f.modalidad).filter(Boolean))].sort();
+---
+
+<Base
+  titulo="Dónde estudiar audio y sonido en Argentina · Invisible"
+  descripcion="Carreras, tecnicaturas, cursos y talleres de audio, grabación, mezcla y mastering en Argentina. Información reunida por Invisible."
+  seccion="formacion"
+>
+  <section class="portada">
+    <div class="contenedor">
+      <div class="eyebrow">Directorio</div>
+      <h1>Formación</h1>
+      <p class="intro">
+        Dónde se aprende el oficio. Carreras, tecnicaturas, cursos y talleres
+        de todo el país, reunidos en un solo lugar.
+      </p>
+      <div class="contador"><strong>{formacion.length}</strong> instituciones</div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <Filtros opciones={modalidades} />
+
+    <div class="grid">
+      {lista.map((f) => (
+        <Tarjeta
+          href={`/formacion/${f.slug}/`}
+          imagen={f.logo}
+          contener={true}
+          titulo={f.nombre}
+          lugar={[f.ubicacion, f.modalidad].filter(Boolean).join(' · ')}
+          etiquetas={f.tiposFormacion}
+          filtro={f.modalidad}
+        />
+      ))}
+    </div>
+
+    <div class="sin-resultados" style="display:none">
+      No hay instituciones con esa modalidad todavía.
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,20 @@
+# dependencias
+node_modules/
+
+# salida del build
+dist/
+.astro/
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# entorno
+.env
+.env.production
+*.log
+
+# NOTA: src/data/ y public/img/ SÍ van al repositorio.
+# Los genera el importador desde los CSV de Airtable, y Cloudflare
+# los necesita para construir el sitio (no tiene acceso a tu OneDrive).

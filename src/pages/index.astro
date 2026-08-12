@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import estudios from '../data/estudios.json';
+import ingenieros from '../data/ingenieros.json';
+import formacion from '../data/formacion.json';
+
+const secciones = [
+  {
+    href: '/estudios-de-grabacion/',
+    titulo: 'Estudios',
+    texto: 'Salas con identidad propia, abiertas a quien quiera grabar en ellas.',
+    cantidad: `${estudios.length} estudios`,
+  },
+  {
+    href: '/ingenierosyproductores/',
+    titulo: 'Ingenieros y Productores',
+    texto: 'Quienes graban, mezclan, masterizan y producen la música argentina.',
+    cantidad: `${ingenieros.length} profesionales`,
+  },
+  {
+    href: '/formacion/',
+    titulo: 'Formación',
+    texto: 'Dónde se aprende el oficio: carreras, cursos y talleres del país.',
+    cantidad: `${formacion.length} instituciones`,
+  },
+  {
+    href: '/discografia/',
+    titulo: 'Discografía',
+    texto: 'El trabajo, contado por quienes lo hicieron.',
+    cantidad: 'Próximamente',
+    proximamente: true,
+  },
+];
+---
+
+<Base
+  titulo="Invisible · Directorio del Audio Argentino"
+  descripcion="El directorio del audio argentino. Estudios de grabación, ingenieros, productores y formación, reunidos y curados por criterio."
+>
+  <section class="hero">
+    <div class="contenedor">
+      <h1>Invisible</h1>
+      <div class="bajada">Directorio del Audio Argentino</div>
+      <p class="lema">
+        El trabajo que sostiene la música argentina casi nunca se ve.
+        Esto es un lugar donde mirarlo.
+      </p>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <div class="secciones">
+      {secciones.map((s) => (
+        <a
+          href={s.proximamente ? '/discografia/' : s.href}
+          class={`seccion-card${s.proximamente ? ' proximamente' : ''}`}
+        >
+          <h2>{s.titulo}</h2>
+          <p>{s.texto}</p>
+          <div class="cantidad">{s.cantidad}</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

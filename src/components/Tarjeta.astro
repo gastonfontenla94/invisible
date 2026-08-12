@@ -1,0 +1,18 @@
+---
+const { href, imagen, contener = false, titulo, lugar, etiquetas = [], filtro = '' } = Astro.props;
+---
+
+<a href={href} class="tarjeta" data-filtro={filtro}>
+  <div class={`imagen${contener ? ' contener' : ''}`}>
+    {imagen && <img src={imagen} alt={titulo} loading="lazy" />}
+  </div>
+  <div class="cuerpo">
+    <h3>{titulo}</h3>
+    {lugar && <div class="lugar">{lugar}</div>}
+    {etiquetas.length > 0 && (
+      <div class="etiquetas">
+        {etiquetas.slice(0, 3).map((e) => <span class="etiqueta">{e}</span>)}
+      </div>
+    )}
+  </div>
+</a>

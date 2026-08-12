@@ -1,0 +1,32 @@
+---
+const { opciones = [] } = Astro.props;
+---
+
+<div class="filtros">
+  <button class="filtro activo" data-valor="">Todos</button>
+  {opciones.map((o) => <button class="filtro" data-valor={o}>{o}</button>)}
+</div>
+
+<script>
+  const botones = document.querySelectorAll('.filtro');
+  const tarjetas = document.querySelectorAll('.tarjeta[data-filtro]');
+  const vacio = document.querySelector('.sin-resultados');
+
+  botones.forEach((b) => {
+    b.addEventListener('click', () => {
+      botones.forEach((x) => x.classList.remove('activo'));
+      b.classList.add('activo');
+
+      const valor = b.dataset.valor;
+      let visibles = 0;
+
+      tarjetas.forEach((t) => {
+        const coincide = !valor || (t.dataset.filtro || '').split('|').includes(valor);
+        t.style.display = coincide ? '' : 'none';
+        if (coincide) visibles++;
+      });
+
+      if (vacio) vacio.style.display = visibles === 0 ? 'block' : 'none';
+    });
+  });
+</script>

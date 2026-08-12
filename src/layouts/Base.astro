@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+
+const {
+  titulo,
+  descripcion = 'Invisible reúne estudios de grabación, ingenieros y productores del audio argentino. Directorio curado por criterio, no por publicidad.',
+  imagen = '/img/marca/invisible-social.png',
+  seccion = '',
+  noindex = false,
+} = Astro.props;
+
+const url = new URL(Astro.url.pathname, Astro.site).href;
+
+const links = [
+  { href: '/estudios-de-grabacion/',  texto: 'Estudios',                 clave: 'estudios' },
+  { href: '/ingenierosyproductores/', texto: 'Ingenieros y Productores', clave: 'ingenieros' },
+  { href: '/formacion/',              texto: 'Formación',                clave: 'formacion' },
+  { href: '/discografia/',            texto: 'Discografía',              clave: 'discografia' },
+  { href: '/mapa/',                   texto: 'Mapa',                     clave: 'mapa' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{titulo}</title>
+  <meta name="description" content={descripcion} />
+  <link rel="canonical" href={url} />
+  {noindex && <meta name="robots" content="noindex" />}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={titulo} />
+  <meta property="og:description" content={descripcion} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={new URL(imagen, Astro.site).href} />
+  <meta property="og:site_name" content="Invisible · Directorio del Audio Argentino" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="sitio-header">
+    <div class="contenedor fila">
+      <a class="marca" href="/">
+        <span class="nombre">Invisible</span>
+        <span class="bajada">Directorio del Audio Argentino</span>
+      </a>
+
+      <button class="nav-boton" aria-label="Menú" aria-expanded="false">☰</button>
+
+      <nav class="nav">
+        {links.map((l) => (
+          <a href={l.href} class={seccion === l.clave ? 'activo' : ''}>{l.texto}</a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor fila">
+      <div>
+        <div class="lockup">Invisible · Directorio del Audio Argentino</div>
+        <div style="margin-top:8px">El orden de las listas es aleatorio y rota cada día.</div>
+      </div>
+      <div style="text-align:right">
+        <a href="mailto:contacto@invisible.com.ar">contacto@invisible.com.ar</a>
+        <div style="margin-top:8px"><a href="/manifiesto/">Manifiesto</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.nav-boton');
+    const nav = document.querySelector('.nav');
+    boton?.addEventListener('click', () => {
+      const abierto = nav.classList.toggle('abierto');
+      boton.setAttribute('aria-expanded', String(abierto));
+    });
+  </script>
+</body>
+</html>

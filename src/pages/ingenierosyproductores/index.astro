@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tarjeta from '../../components/Tarjeta.astro';
+import Filtros from '../../components/Filtros.astro';
+import ingenieros from '../../data/ingenieros.json';
+import { ordenDiario } from '../../lib/orden.js';
+
+const lista = ordenDiario(ingenieros);
+
+const especialidades = [...new Set(ingenieros.flatMap((i) => i.especialidad))].sort();
+---
+
+<Base
+  titulo="Ingenieros y productores de audio de Argentina · Invisible"
+  descripcion="Ingenieros de grabación, mezcla y mastering y productores argentinos. Perfiles con obra, especialidad y estudios donde trabajan."
+  seccion="ingenieros"
+>
+  <section class="portada">
+    <div class="contenedor">
+      <div class="eyebrow">Directorio</div>
+      <h1>Ingenieros y productores</h1>
+      <p class="intro">
+        Quienes graban, mezclan, masterizan y producen la música argentina.
+        No el más barato: el más afín a lo que estás buscando.
+      </p>
+      <div class="contador"><strong>{ingenieros.length}</strong> profesionales</div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <Filtros opciones={especialidades} />
+
+    <div class="grid">
+      {lista.map((i) => (
+        <Tarjeta
+          href={`/ingenierosyproductores/${i.slug}/`}
+          imagen={i.foto}
+          titulo={i.nombre}
+          lugar={i.ciudad}
+          etiquetas={i.especialidad}
+          filtro={i.especialidad.join('|')}
+        />
+      ))}
+    </div>
+
+    <div class="sin-resultados" style="display:none">
+      No hay perfiles con esa especialidad todavía.
+    </div>
+  </div>
+</Base>

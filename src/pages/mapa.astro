@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import estudios from '../data/estudios.json';
+
+const puntos = estudios
+  .filter((e) => e.lat && e.lng)
+  .map((e) => ({
+    nombre: e.nombre,
+    slug: e.slug,
+    lugar: [e.barrio, e.ciudad].filter(Boolean).join(' · '),
+    lat: e.lat,
+    lng: e.lng,
+  }));
+---
+
+<Base
+  titulo="Mapa de estudios de grabación de Argentina · Invisible"
+  descripcion="Dónde están los estudios de grabación del país. Mapa del audio argentino."
+  seccion="mapa"
+>
+  <section class="portada">
+    <div class="contenedor">
+      <div class="eyebrow">Directorio</div>
+      <h1>Mapa</h1>
+      <p class="intro">Dónde está cada estudio. El país entero, de un vistazo.</p>
+      <div class="contador"><strong>{puntos.length}</strong> estudios geolocalizados</div>
+    </div>
+  </section>
+
+  <div id="mapa" data-puntos={JSON.stringify(puntos)}></div>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <script>
+    import 'leaflet/dist/leaflet.css';
+    import L from 'leaflet';
+
+    const nodo = document.getElementById('mapa');
+    const puntos = JSON.parse(nodo.dataset.puntos);
+
+    const mapa = L.map('mapa', { scrollWheelZoom: false }).setView([-38.5, -63.6], 4);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap · © CARTO',
+      maxZoom: 19,
+    }).addTo(mapa);
+
+    const icono = L.divIcon({
+      className: '',
+      html: '<div style="width:13px;height:13px;border-radius:50%;background:#c8a05a;border:2px solid #0c0a09;box-shadow:0 0 0 1px rgba(200,160,90,.55)"></div>',
+      iconSize: [13, 13],
+      iconAnchor: [6, 6],
+    });
+
+    const marcadores = [];
+
+    puntos.forEach((p) => {
+      const m = L.marker([p.lat, p.lng], { icon: icono }).addTo(mapa);
+      m.bindPopup(
+        `<strong>${p.nombre}</strong>${p.lugar ? p.lugar + '<br>' : ''}<a href="/estudios-de-grabacion/${p.slug}/">Ver ficha →</a>`
+      );
+      marcadores.push(m);
+    });
+
+    if (marcadores.length) {
+      mapa.fitBounds(L.featureGroup(marcadores).getBounds().pad(0.15));
+    }
+  </script>
+</Base>

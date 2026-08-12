@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import ingenieros from '../../data/ingenieros.json';
+
+export function getStaticPaths() {
+  return ingenieros.map((i) => ({ params: { slug: i.slug }, props: { i } }));
+}
+
+const { i } = Astro.props;
+---
+
+<Base
+  titulo={i.seoTitle || `${i.nombre} · Invisible · Directorio del Audio Argentino`}
+  descripcion={i.seoDescription || i.bio}
+  imagen={i.foto}
+  seccion="ingenieros"
+>
+  <div class="contenedor volver">
+    <a href="/ingenierosyproductores/">← Ingenieros y productores</a>
+  </div>
+
+  <section class="detalle-hero">
+    <div class="contenedor marco">
+      <div class="retrato">
+        {i.foto && <img src={i.foto} alt={i.nombre} />}
+      </div>
+
+      <div>
+        <div class="eyebrow">
+          {i.especialidad.length ? i.especialidad.join(' · ') : 'Ingeniero · Productor'}
+        </div>
+        <h1>{i.nombre}</h1>
+        {i.ciudad && <div class="sitio-de">{i.ciudad}</div>}
+
+        {i.bio && <p class="bio">{i.bio}</p>}
+
+        <div class="acciones">
+          {i.web && <a class="boton primario" href={i.web} target="_blank" rel="noopener">Sitio web</a>}
+          {i.instagram && <a class="boton" href={i.instagram} target="_blank" rel="noopener">{i.instagramHandle || 'Instagram'}</a>}
+          {i.email && <a class="boton" href={`mailto:${i.email}`}>Escribir</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <div class="ficha">
+      {i.especialidad.length > 0 && (
+        <div class="dato">
+          <div class="rotulo">Especialidad</div>
+          <div class="valor">{i.especialidad.join(' · ')}</div>
+        </div>
+      )}
+
+      {i.ciudad && (
+        <div class="dato">
+          <div class="rotulo">Ciudad</div>
+          <div class="valor">{i.ciudad}</div>
+        </div>
+      )}
+
+      {i.estudiosVinculados.length > 0 && (
+        <div class="dato">
+          <div class="rotulo">Estudios</div>
+          <div class="valor enlaces-internos">
+            {i.estudiosVinculados.map((e) => (
+              <a href={`/estudios-de-grabacion/${e.slug}/`}>{e.nombre}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import formacion from '../../data/formacion.json';
+import ingenieros from '../../data/ingenieros.json';
+
+export function getStaticPaths() {
+  return formacion.map((f) => ({ params: { slug: f.slug }, props: { f } }));
+}
+
+const { f } = Astro.props;
+
+// resolvemos los docentes que ya tienen perfil en el directorio
+const docentes = f.impartidoPor.map((nombre) => {
+  const perfil = ingenieros.find((i) => i.nombre === nombre);
+  return { nombre, slug: perfil ? perfil.slug : null };
+});
+
+const datos = [
+  { rotulo: 'Tipo de institución', valor: f.tipoInstitucion },
+  { rotulo: 'Formación', valor: f.tiposFormacion.join(' · ') },
+  { rotulo: 'Especialidad', valor: f.especialidad.join(' · ') },
+  { rotulo: 'Modalidad', valor: f.modalidad },
+  { rotulo: 'Ubicación', valor: f.ubicacion },
+  { rotulo: 'Certificado', valor: f.certificado ? 'Sí' : '' },
+].filter((d) => d.valor);
+---
+
+<Base
+  titulo={f.seoTitle || `${f.nombre} · Invisible · Directorio del Audio Argentino`}
+  descripcion={f.seoDescription || f.descripcion}
+  imagen={f.logo}
+  seccion="formacion"
+>
+  <div class="contenedor volver">
+    <a href="/formacion/">← Formación</a>
+  </div>
+
+  <section class="detalle-hero">
+    <div class="contenedor marco">
+      <div class="retrato contener">
+        {f.logo && <img src={f.logo} alt={f.nombre} />}
+      </div>
+
+      <div>
+        <div class="eyebrow">Formación en audio</div>
+        <h1>{f.nombre}</h1>
+        {(f.ubicacion || f.modalidad) && (
+          <div class="sitio-de">{[f.ubicacion, f.modalidad].filter(Boolean).join(' · ')}</div>
+        )}
+
+        {f.descripcion && <p class="bio">{f.descripcion}</p>}
+
+        <div class="acciones">
+          {f.web && <a class="boton primario" href={f.web} target="_blank" rel="noopener">Sitio web</a>}
+          {f.instagram && <a class="boton" href={f.instagram} target="_blank" rel="noopener">{f.instagramHandle || 'Instagram'}</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <div class="ficha">
+      {datos.map((d) => (
+        <div class="dato">
+          <div class="rotulo">{d.rotulo}</div>
+          <div class="valor">{d.valor}</div>
+        </div>
+      ))}
+
+      {docentes.length > 0 && (
+        <div class="dato">
+          <div class="rotulo">Impartido por</div>
+          <div class="valor enlaces-internos">
+            {docentes.map((d) =>
+              d.slug
+                ? <a href={`/ingenierosyproductores/${d.slug}/`}>{d.nombre}</a>
+                : <span>{d.nombre}</span>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

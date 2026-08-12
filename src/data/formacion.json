@@ -1,0 +1,441 @@
+[
+  {
+    "tipo": "formacion",
+    "nombre": "Instituto Orión",
+    "slug": "instituto-orion",
+    "descripcion": "Instituto de formación en sonido con un gran recorrido de estudiantes que recomiendan sus cursos.",
+    "tipoInstitucion": "Estudio",
+    "tiposFormacion": [
+      "Curso"
+    ],
+    "impartidoPor": [
+      "Pablo Rabinovich"
+    ],
+    "especialidad": [
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Online",
+    "ubicacion": "CABA",
+    "web": "https://www.cursosdesonido.com.ar/",
+    "instagram": "https://www.instagram.com/orion.cts/?hl=es",
+    "instagramHandle": "@orion.cts",
+    "estudio": "Estudio Orión",
+    "certificado": true,
+    "logo": "/img/formacion/instituto-orion-logo.webp",
+    "seoTitle": "Instituto Orión · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Instituto Orión — CABA · Online. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Escuela de Música de Buenos Aires",
+    "slug": "escuela-de-musica-de-buenos-aires",
+    "descripcion": "La Escuela de Música de Buenos Aires es la primera institución musical integrada de la Argentina. Fundada en 1986 ubicada en la ciudad autónoma de Buenos Aires.\n\nEs la primera institución pública de gestión privada en ofrecer títulos de nivel superior en música, sonido, grabación, producción musical, música electrónica y multimedia, cubriendo todos los aspectos de la actividad musical actual.\n\nEl área de música propiamente dicha incluye la enseñanza de instrumentos musicales como guitarra, piano, bandoneón,violín, bajo, violonchelo, contrabajo, flauta traversa, saxo, clarinete, trompeta, trombón, batería y percusión. También se imparten clases de canto, composición y educación musical en los niveles de Formación Básica, tecnicaturas en sonido, grabación y producción yedición de audio y video y multimedia.",
+    "tipoInstitucion": "Academia",
+    "tiposFormacion": [
+      "Carrera",
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla"
+    ],
+    "modalidad": "Presencial,Online",
+    "ubicacion": "CABA",
+    "web": "https://www.emba.com.ar/",
+    "instagram": "https://www.instagram.com/embaoficial/",
+    "instagramHandle": "@embaoficial",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/escuela-de-musica-de-buenos-aires-logo.webp",
+    "seoTitle": "Escuela de Música de Buenos Aires · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Escuela de Música de Buenos Aires — CABA · Presencial, Online. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Andres Mayo Cursos",
+    "slug": "andres-mayo-cursos",
+    "descripcion": "Cursos online dictados por Andrés Mayo y Martin Muscatello que cuentan con la experiencia de años de trabajo en el sector junto a prestigiosos artistas.",
+    "tipoInstitucion": "Estudio",
+    "tiposFormacion": [
+      "Curso"
+    ],
+    "impartidoPor": [
+      "Andrés Mayo",
+      "Martín Muscatello"
+    ],
+    "especialidad": [
+      "Mastering",
+      "Dolby Atmos",
+      "Producción",
+      "Mezcla"
+    ],
+    "modalidad": "Online",
+    "ubicacion": "CABA",
+    "web": "https://cursos.andresmayo.com/",
+    "instagram": "https://www.instagram.com/andresmayoestudio/",
+    "instagramHandle": "@andresmayoestudio",
+    "estudio": "Andrés Mayo Estudio",
+    "certificado": true,
+    "logo": "/img/formacion/andres-mayo-cursos-logo.webp",
+    "seoTitle": "Andres Mayo Cursos · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Andres Mayo Cursos — CABA · Online. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Estudio Urbano",
+    "slug": "estudio-urbano",
+    "descripcion": "El programa de cursos de Estudio Urbano ofrece actividades de formación para promover el ingreso al mercado laboral a través de los oficios de la actividad musical, impulsar la creatividad mediante herramientas técnicas y artísticas, y fomentar la profesionalización de los proyectos musicales a través de herramientas de gestión.",
+    "tipoInstitucion": "Estudio",
+    "tiposFormacion": [
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios",
+      "Ezequiel Morfi"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Online,Presencial",
+    "ubicacion": "CABA",
+    "web": "https://buenosaires.gob.ar/gcaba_historico/formacion",
+    "instagram": "https://www.instagram.com/estudiourbanoba/",
+    "instagramHandle": "@estudiourbanoba",
+    "estudio": "Estudio Urbano",
+    "certificado": false,
+    "logo": "/img/formacion/estudio-urbano-logo.webp",
+    "seoTitle": "Estudio Urbano · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Estudio Urbano — CABA · Online, Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Universidad Nacional de las Artes",
+    "slug": "universidad-nacional-de-las-artes",
+    "descripcion": "La Universidad Nacional de las Artes brinda cursos de Composición, Sonido en Vivo y Mastering entre otras disciplinas vinculadas al sonido y a la música.",
+    "tipoInstitucion": "Universidad",
+    "tiposFormacion": [
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Mastering",
+      "Sonido en vivo"
+    ],
+    "modalidad": "Online,Presencial",
+    "ubicacion": "CABA",
+    "web": "https://una.edu.ar/cursos/",
+    "instagram": "https://www.instagram.com/una.oficial/",
+    "instagramHandle": "@una.oficial",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/universidad-nacional-de-las-artes-logo.webp",
+    "seoTitle": "Universidad Nacional de las Artes · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Universidad Nacional de las Artes — CABA · Online, Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Instituto Terciario Tamaba",
+    "slug": "instituto-terciario-tamaba",
+    "descripcion": "El Instituto Terciario Tamaba es una institución con una extensa trayectoria y experiencia que brinda carreras, cursos y talleres relacionados al sonido y a la música.",
+    "tipoInstitucion": "Terciario",
+    "tiposFormacion": [
+      "Carrera",
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla",
+      "Mastering",
+      "Sonido en vivo"
+    ],
+    "modalidad": "Presencial,Online,Híbrida",
+    "ubicacion": "CABA",
+    "web": "https://tamaba.edu.ar/",
+    "instagram": "https://www.instagram.com/terciariotamaba/",
+    "instagramHandle": "@terciariotamaba",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/instituto-terciario-tamaba-logo.webp",
+    "seoTitle": "Instituto Terciario Tamaba · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Instituto Terciario Tamaba — CABA · Presencial, Online, Híbrida. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Instituto REC",
+    "slug": "instituto-rec",
+    "descripcion": "Este espacio nace de una historia real: la de vivir el audio desde adentro.\nDesde el estudio, desde el escenario y desde el aula.\nInstituto REC surge de años de experiencia profesional en grabación, producción musical, sonido en vivo y formación académica.\nEsta nueva web reúne todo eso:\nnuestros cursos, nuestra forma de enseñar, nuestra visión del audio y el compromiso que tenemos con cada alumno que decide formarse con nosotros.\nSi llegaste hasta acá, probablemente compartimos algo más que el interés por el sonido. Compartimos la búsqueda de hacer las cosas bien, con criterio, pasión y profesionalismo.\nBienvenidos a Instituto REC.\nUn espacio para aprender audio de verdad.",
+    "tipoInstitucion": "Academia",
+    "tiposFormacion": [
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Mezcla",
+      "Mastering",
+      "Grabación",
+      "Dolby Atmos"
+    ],
+    "modalidad": "Presencial",
+    "ubicacion": "Mendoza",
+    "web": "https://www.institutorec.com",
+    "instagram": "https://www.instagram.com/institutorec",
+    "instagramHandle": "@institutorec",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/instituto-rec-logo.webp",
+    "seoTitle": "Instituto REC · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Instituto REC — Mendoza · Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Escuela Tecson",
+    "slug": "escuela-tecson",
+    "descripcion": "Escuela Tecson es pionera en la formación de profesionales en los diferentes campos del audio y el sonido. Desde el año 1989, dictamos \"Grabación y Post Producción de Audio\" y \"Producción Musical\". Formamos simultáneamente a más de 300 alumnos por año con el más alto nivel de Latinoamérica.",
+    "tipoInstitucion": "Escuela",
+    "tiposFormacion": [
+      "Curso",
+      "Taller",
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Presencial",
+    "ubicacion": "CABA",
+    "web": "https://www.tecson.com.ar/",
+    "instagram": "https://www.instagram.com/escuelatecson",
+    "instagramHandle": "@escuelatecson",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/escuela-tecson-logo.webp",
+    "seoTitle": "Escuela Tecson · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Escuela Tecson — CABA · Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Instituto de Sonido ECOS",
+    "slug": "instituto-de-sonido-ecos",
+    "descripcion": "El Instituto de Sonido ECOS tiene como fin insertar a los alumnos interesados en el área técnica de espectáculos con un criterio vocacional específico y acorde a las necesidades del mercado. Contamos con un staff de docentes en plena actividad en los campos de sonido en vivo, grabación en estudio, diseño y tratamiento acústico y calibración de sistemas. La capacitación no solo es un plan de estudios, también es importante la experiencia y el trabajo constante de nuestros docentes para garantizar una educación fortalecida en lo empírico.",
+    "tipoInstitucion": "Instituto",
+    "tiposFormacion": [
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Sonido en vivo",
+      "Producción"
+    ],
+    "modalidad": "Presencial,Online",
+    "ubicacion": "Avellaneda - Provincia de Buenos Aires",
+    "web": "https://escueladesonido.com.ar/",
+    "instagram": "https://www.instagram.com/escueladesonidoecos/",
+    "instagramHandle": "@escueladesonidoecos",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/instituto-de-sonido-ecos-logo.webp",
+    "seoTitle": "Instituto de Sonido ECOS · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Instituto de Sonido ECOS — Avellaneda - Provincia de Buenos Aires · Presencial, Online. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "MAD Escuela",
+    "slug": "mad-escuela",
+    "descripcion": "Somos una Escuela de Música ubicada en Colegiales, Capital Federal hace más de 5 años. Nuestra pasión es brindarte todo lo que sabemos para que crezcas como Artista y Profesional día a día, y desde tu casa.",
+    "tipoInstitucion": "Escuela",
+    "tiposFormacion": [
+      "Curso",
+      "Taller"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Producción",
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Online",
+    "ubicacion": "CABA",
+    "web": "https://www.madescuela.com/",
+    "instagram": "https://www.instagram.com/madescuela/",
+    "instagramHandle": "@madescuela",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/mad-escuela-logo.webp",
+    "seoTitle": "MAD Escuela · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "MAD Escuela — CABA · Online. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "La Metro",
+    "slug": "la-metro",
+    "descripcion": "La Metro es una Institución con Docentes Referentes, Prácticas Reales y 25 años de trayectoria.\n\nÚnica carrera oficial en Córdoba.\n\nLa Tecnicatura Superior en Sonido forma profesionales mediante un proceso académico y pedagógico basado en el conocimiento técnico, artístico y práctico necesarios para la adquisición de las competencias específicas e indispensables para trabajar en el mundo de las producciones musicales y fonográficas, y de la producción, diseño y operación de sonido en vivo.",
+    "tipoInstitucion": "Terciario",
+    "tiposFormacion": [
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Sonido"
+    ],
+    "modalidad": "Presencial",
+    "ubicacion": "Córdoba",
+    "web": "https://lametro.edu.ar/",
+    "instagram": "https://www.instagram.com/lametrocordoba/",
+    "instagramHandle": "@lametrocordoba",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/la-metro-logo.webp",
+    "seoTitle": "La Metro · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "La Metro — Córdoba · Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "Aural - Escuela de Audio",
+    "slug": "aural-escuela-de-audio",
+    "descripcion": "Desde el principio nos propusimos ser la mejor escuela de audio de Latinoamérica en todos los aspectos, como nuestros programas de estudio constantemente actualizados a lo que requieren las nuevas tecnologías, docentes en actividad profesional con muchísima experiencia, equipamiento técnico de primera línea, la mejor atención y el mejor clima para que el desarrollo de la cursada sea un verdadero disfrute. Cada uno de nuestros cursos está dedicado a un área específica de esta industria que nos apasiona tanto. En ellos vas a disfrutar de clases donde siempre encontrarás algo nuevo para aprender y para poner en práctica.   \n\nVení a conocernos ¡Te esperamos!",
+    "tipoInstitucion": "Terciario",
+    "tiposFormacion": [
+      "Curso",
+      "Taller",
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Online,Presencial,Híbrida",
+    "ubicacion": "CABA",
+    "web": "https://auralescuela.com/",
+    "instagram": "https://www.instagram.com/auralescuela/",
+    "instagramHandle": "@auralescuela",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/aural-escuela-de-audio-logo.webp",
+    "seoTitle": "Aural - Escuela de Audio · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "Aural - Escuela de Audio — CABA · Online, Presencial, Híbrida. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "INARTEC",
+    "slug": "inartec",
+    "descripcion": "En INARTEC formamos productores e ingenieros listos para la industria real. \n\n25 años de trayectoria y desarrollo académico.\n\nStaff de docentes profesionales con más de 20 años de experiencia.\n\n1000m4 de infraestructura para tus prácticas.\n\n \nQuerés vivir de la música? Empezá en el lugar correcto.",
+    "tipoInstitucion": "Escuela",
+    "tiposFormacion": [
+      "Curso",
+      "Taller",
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Grabación",
+      "Producción",
+      "Mezcla",
+      "Mastering"
+    ],
+    "modalidad": "Online,Presencial,Híbrida",
+    "ubicacion": "CABA",
+    "web": "https://inartec.com.ar/",
+    "instagram": "https://www.instagram.com/inartec_escuela/",
+    "instagramHandle": "@inartec_escuela",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/inartec-logo.webp",
+    "seoTitle": "INARTEC · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "INARTEC — CABA · Online, Presencial, Híbrida. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "La Colmena",
+    "slug": "la-colmena",
+    "descripcion": "La Colmena Escuela de Música tiene 35 años de trayectoria y es una de las primeras escuelas de música popular del país. Desde el año 2012 su entidad propietaria es la Fundación La Colmena escuela de músicos.\n\nComenzó con un grupo de jóvenes músicos, entre ellos Oscar “Pato” Pedano, su actual director, como un taller donde músicos con experiencia se encontraban para desarrollar sus inquietudes musicales.\n\nDesde sus inicios es un semillero de músicos de gran renombre que trabajan en Córdoba, diferentes partes de Argentina, Estados Unidos, Europa y otros países del mundo.\n\nEl plantel docente está integrado por músicos y productores que transitan escenarios locales, nacionales e internacionales permitiendo una constante actualización de los contenidos brindados.",
+    "tipoInstitucion": "Escuela",
+    "tiposFormacion": [
+      "Curso",
+      "Taller",
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Producción"
+    ],
+    "modalidad": "Presencial",
+    "ubicacion": "Córdoba",
+    "web": "https://www.lacolmenaescuelademusica.edu.ar/",
+    "instagram": "https://www.instagram.com/lacolmenaescuelademusica/",
+    "instagramHandle": "@lacolmenaescuelademusica",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/la-colmena-logo.webp",
+    "seoTitle": "La Colmena · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "La Colmena — Córdoba · Presencial. Ficha en Invisible, directorio del audio argentino."
+  },
+  {
+    "tipo": "formacion",
+    "nombre": "EMC - Escuela de Música Contemporánea",
+    "slug": "emc-escuela-de-musica-contemporanea",
+    "descripcion": "Misión y Visión\nLa Escuela de Música Contemporánea (EMC) propone profesionalizar el estudio de música a partir del desarrollo de estilos universales como el Jazz, Blues, Rock, Pop, la música popular argentina y otras vertientes latinoamericanas.\n\nCreemos que la enseñanza de música popular en nuestro país se encuentra en deuda con la riqueza y el talento innato de nuestros músicos. En respuesta a esa exigencia, capacitamos a nuestros estudiantes de manera integral con programas modernos dictados por docentes reconocidos.\n\nContamos con el respaldo de Berklee College of Music (Boston), que nos ha designado como Berklee Global Partner (BGP) exclusivo en Argentina desde 2001.",
+    "tipoInstitucion": "Escuela",
+    "tiposFormacion": [
+      "Carrera"
+    ],
+    "impartidoPor": [
+      "Varios"
+    ],
+    "especialidad": [
+      "Producción"
+    ],
+    "modalidad": "Presencial,Online,Híbrida",
+    "ubicacion": "CABA",
+    "web": "https://www.escuelademusica.org/",
+    "instagram": "https://www.instagram.com/emc.argentina/",
+    "instagramHandle": "@emc.argentina",
+    "estudio": "",
+    "certificado": true,
+    "logo": "/img/formacion/emc-escuela-de-musica-contemporanea-logo.webp",
+    "seoTitle": "EMC - Escuela de Música Contemporánea · Invisible · Directorio del Audio Argentino",
+    "seoDescription": "EMC - Escuela de Música Contemporánea — CABA · Presencial, Online, Híbrida. Ficha en Invisible, directorio del audio argentino."
+  }
+]

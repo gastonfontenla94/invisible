@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import estudios from '../../data/estudios.json';
+
+export function getStaticPaths() {
+  return estudios.map((e) => ({ params: { slug: e.slug }, props: { e } }));
+}
+
+const { e } = Astro.props;
+
+const datos = [
+  { rotulo: 'Dirección', valor: [e.direccion, e.barrio, e.ciudad, e.provincia].filter(Boolean).join(', ') },
+  { rotulo: 'Fundado en', valor: e.anio },
+  { rotulo: 'Tipo de sala', valor: e.tipoSala.join(' · ') },
+  { rotulo: 'Consola principal', valor: e.consola },
+  { rotulo: 'DAW principal', valor: e.daw },
+  { rotulo: 'Géneros', valor: e.generos.join(' · ') },
+].filter((d) => d.valor);
+---
+
+<Base
+  titulo={e.seoTitle || `${e.nombre} · Invisible · Directorio del Audio Argentino`}
+  descripcion={e.seoDescription || e.descripcion}
+  imagen={e.foto || e.logo}
+  seccion="estudios"
+>
+  <div class="contenedor volver">
+    <a href="/estudios-de-grabacion/">← Estudios</a>
+  </div>
+
+  <section class="detalle-hero">
+    <div class="contenedor marco">
+      <div class={`retrato${e.foto ? '' : ' contener'}`}>
+        {(e.foto || e.logo) && <img src={e.foto || e.logo} alt={e.nombre} />}
+      </div>
+
+      <div>
+        <div class="eyebrow">Estudio de grabación</div>
+        <h1>{e.nombre}</h1>
+        {(e.barrio || e.ciudad) && (
+          <div class="sitio-de">{[e.barrio, e.ciudad, e.provincia].filter(Boolean).join(' · ')}</div>
+        )}
+
+        {e.descripcion && <p class="bio">{e.descripcion}</p>}
+
+        <div class="acciones">
+          {e.web && <a class="boton primario" href={e.web} target="_blank" rel="noopener">Sitio web</a>}
+          {e.instagram && <a class="boton" href={e.instagram} target="_blank" rel="noopener">{e.instagramHandle || 'Instagram'}</a>}
+          {e.email && <a class="boton" href={`mailto:${e.email}`}>Escribir</a>}
+          {e.telefono && <a class="boton" href={`tel:${e.telefono.replace(/\s/g, '')}`}>{e.telefono}</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <div class="ficha">
+      {datos.map((d) => (
+        <div class="dato">
+          <div class="rotulo">{d.rotulo}</div>
+          <div class="valor">{d.valor}</div>
+        </div>
+      ))}
+
+      {e.equipamiento && (
+        <div class="dato" style="grid-column: 1 / -1">
+          <div class="rotulo">Equipamiento destacado</div>
+          <div class="valor largo">{e.equipamiento}</div>
+        </div>
+      )}
+
+      {e.ingenierosVinculados.length > 0 && (
+        <div class="dato">
+          <div class="rotulo">Ingenieros y productores</div>
+          <div class="valor enlaces-internos">
+            {e.ingenierosVinculados.map((i) => (
+              <a href={`/ingenierosyproductores/${i.slug}/`}>{i.nombre}</a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {e.lat && e.lng && (
+        <div class="dato">
+          <div class="rotulo">Ubicación</div>
+          <div class="valor enlaces-internos">
+            <a href={`https://www.google.com/maps?q=${e.lat},${e.lng}`} target="_blank" rel="noopener">
+              Ver en el mapa
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

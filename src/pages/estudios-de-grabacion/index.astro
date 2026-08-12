@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tarjeta from '../../components/Tarjeta.astro';
+import Filtros from '../../components/Filtros.astro';
+import estudios from '../../data/estudios.json';
+import { ordenDiario } from '../../lib/orden.js';
+
+const lista = ordenDiario(estudios);
+
+const provincias = [...new Set(estudios.map((e) => e.provincia).filter(Boolean))].sort();
+---
+
+<Base
+  titulo="Estudios de grabación de Argentina · Invisible"
+  descripcion="Estudios de grabación de todo el país, reunidos y curados. Salas con identidad propia, abiertas a quien quiera grabar en ellas."
+  seccion="estudios"
+>
+  <section class="portada">
+    <div class="contenedor">
+      <div class="eyebrow">Directorio</div>
+      <h1>Estudios de grabación</h1>
+      <p class="intro">
+        Salas con identidad propia, abiertas a quien quiera grabar en ellas.
+        De Buenos Aires a la Patagonia.
+      </p>
+      <div class="contador"><strong>{estudios.length}</strong> estudios</div>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <Filtros opciones={provincias} />
+
+    <div class="grid">
+      {lista.map((e) => (
+        <Tarjeta
+          href={`/estudios-de-grabacion/${e.slug}/`}
+          imagen={e.foto || e.logo}
+          titulo={e.nombre}
+          lugar={[e.barrio, e.ciudad].filter(Boolean).join(' · ')}
+          etiquetas={e.tipoSala}
+          filtro={e.provincia}
+        />
+      ))}
+    </div>
+
+    <div class="sin-resultados" style="display:none">
+      No hay estudios cargados en esa provincia todavía.
+    </div>
+  </div>
+</Base>

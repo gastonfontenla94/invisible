@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base titulo="Página no encontrada · Invisible" noindex={true}>
+  <section style="min-height:60vh; display:grid; place-items:center; text-align:center; padding:100px 0">
+    <div class="contenedor">
+      <div class="eyebrow">Error 404</div>
+      <h1 style="font-size:clamp(2rem,5vw,3rem)">Esta página no existe</h1>
+      <p style="margin-top:20px; color:var(--gris); max-width:46ch; margin-inline:auto">
+        Puede que el enlace haya cambiado. Probá desde el directorio.
+      </p>
+      <div class="acciones" style="justify-content:center">
+        <a class="boton primario" href="/estudios-de-grabacion/">Estudios</a>
+        <a class="boton" href="/ingenierosyproductores/">Ingenieros y productores</a>
+        <a class="boton" href="/formacion/">Formación</a>
+      </div>
+    </div>
+  </section>
+</Base>
